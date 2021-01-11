@@ -6,6 +6,9 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- this is a comment in HTML -->
+	<link rel="stylesheet" type="text/css" href="css/introHCI.css">
+	<link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -15,67 +18,98 @@
 </head>
 
 <body>
+	<body>
+    <nav id="mainNavbar"class="navbar navbar-dark navbar-expand-md fixed-top py-0"><a href="#" class="navbar-brand">RAYMOND IBRAHIM</a> 
+      <button class="navbar-toggler" data-toggle="collapse" type="button" data-target="#navbarSupportedContent"  aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav">
+          <li class="nav-item"><a href="" class="nav-link">HOME</a></li>
+          <li class="nav-item"><a href="" class="nav-link">ABOUT</a></li>
+          <li class="nav-item"><a href="" class="nav-link">PROJECTS</a></li>
+        </ul>
+    </div>
+  </nav>
 	<div>
 		<!-- h1 through h6 are headers. The higher the number, the smaller the header -->
 		<!-- p means paragraph -->
 		<div>
 			<h1>Raymond Ibrahim</h1>
-			<p>human-computer interaction &middot; social computing &middot; crowdsourcing</p>
+			<p>Hello! I am a full-stack web developer and I love to design and build user interfaces. <br>
+			Check out some of my projects below</p>
 		</div>
 
-
+	 
 		<h4>Projects</h4>
+		<div class="row align-items-center">
+			<div class="col-lg-6">
 		<!-- divs are invisible structuring elements that stack vertically by default. Use them to organize your code -->
 		<!-- img tags are images. Lorem Pixel will deliver random images; handy! -->
 		<!-- a are anchors, also known as hyperlinks. Use the href attribute to tell the browser where to go when the user clicks -->
-		<div id="project1">
+		<div class="project" id="project1">
 			<a href="project.html">
 				<img src="images/lorempixel.people.1.jpeg" alt="Lorem Pixel image">
 				<p>Waiting in Line</p>
 			</a>
 		</div>
-		<div id="project2">
+		<div class="project" id="project2">
 			<a href="project.html">
 				<img src="images/lorempixel.city.1.jpeg" alt="Lorem Pixel image">
 				<p>Needfinding</p>
 			</a>
 		</div>
-		<div id="project3">
+		<div class="project" id="project3">
 			<a href="project.html">
 				<img src="images/lorempixel.technics.1.jpeg" alt="Lorem Pixel image">
 				<p>Prototyping</p>
 			</a>
 		</div>
-		<div id="project4">
+		<div class="project" id="project4">
 			<a href="project.html">
 				<img src="images/lorempixel.abstract.1.jpeg" alt="Lorem Pixel image">
 				<p>Heuristic Evaluation</p>
 			</a>
 		</div>
-		<div id="project5">
+		<div class="project" id="project5">
 			<a href="project.html">
 				<img src="images/lorempixel.abstract.8.jpeg" alt="Lorem Pixel image">
 				<p>Visualization</p>
 			</a>
 		</div>
-		<div id="project6">
+		<div class="project" id="project6">
 			<a href="project.html">
 				<img src="images/lorempixel.people.2.jpeg" alt="Lorem Pixel image">
 				<p>Social design</p>
 			</a>
 		</div>
-		<div id="project7">
+		<div class="project" id="project7">
 			<a href="project.html">
 				<img src="images/lorempixel.technics.2.jpeg" alt="Lorem Pixel image">
 				<p>Gestural interaction</p>
 			</a>
 		</div>
-		<div id="project8">
+		<div class="project" id="project8">
 			<a href="project.html">
 				<img src="images/lorempixel.city.2.jpeg" alt="Lorem Pixel image">
 				<p>Design tools</p>
 			</a>
 		</div>
+		</div>
+		</div>
 	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>   
+    <script>
+      $(function () {
+        $(document).scroll(function(){
+          var $nav = $("#mainNavbar");
+          $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+        });
+      });
+    </script>
 </body>
 </html>
