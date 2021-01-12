@@ -32,3 +32,12 @@ body {
      position: absolute;
      z-index: -1;
 }
+
+.project {
+     margin-left: 20px;
+}
+.navbar.scrolled{
+     background: rgb(222, 192, 222) !important;
+     transition: background-color 1s linear;
+  }
+
